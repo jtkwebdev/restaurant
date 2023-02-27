@@ -1,0 +1,13 @@
+'use strict';
+const Item = require('../models/item_schema');
+
+const readItemData = async (req, res) => {
+  try{
+    const items = await Item.find();
+    res.json(items)
+  }catch(err){
+    res.send('error ' + err)
+  }
+};
+
+module.exports = readItemData;
