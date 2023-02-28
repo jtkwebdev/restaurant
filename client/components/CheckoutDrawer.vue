@@ -155,6 +155,8 @@ export default {
       }catch(err){
         console.log('final order2',message)
         console.log(err,"hh")
+      }finally{
+        this.selected = []
       }
     }
   }
